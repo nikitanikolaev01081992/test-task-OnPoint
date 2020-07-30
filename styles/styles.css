@@ -177,6 +177,7 @@ h3 {
   height: 15px;
   background-color: #d1eaff;
   position: absolute;
+  pointer-events: none;
 }
 .slide-3 .slide-changer input {
   -webkit-appearance: none;
