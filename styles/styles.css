@@ -50,7 +50,7 @@ h3 {
 }
 
 .slide-1 {
-  background: no-repeat left/100% url("/images/bg-slide1.png");
+  background: no-repeat left/100% url("../images/bg-slide1.png");
   position: relative;
 }
 .slide-1__header, .slide-1__sub-head {
@@ -142,7 +142,7 @@ h3 {
   }
 }
 .slide-2 {
-  background: no-repeat top/100% url("/images/bg-slide2.png");
+  background: no-repeat top/100% url("../images/bg-slide2.png");
 }
 .slide-2__header {
   width: 50%;
@@ -220,7 +220,7 @@ h3 {
 .slide-3 .slide-3-1 {
   width: 1024px;
   height: 768px;
-  background: no-repeat top/100% url("/images/bg-slide3.png");
+  background: no-repeat top/100% url("../images/bg-slide3.png");
   position: relative;
 }
 .slide-3 .slide-3-1 .background-effect {
