@@ -134,7 +134,7 @@ const handleHorizontalMove = () => {
     // } else {
     // }
 
-    currentShiftX = roundedValue / 50;
+    currentShiftX = roundedValue / 50; //because we have 3 positions(0, 50, 100) and step is 50
 
     SLIDE_CHANGER.value = roundedValue;
     changeWidthPB(); //change with of progress bar because input event is not fired here
