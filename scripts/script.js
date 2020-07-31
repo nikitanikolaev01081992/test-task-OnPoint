@@ -111,7 +111,7 @@ const SLIDE_CHANGER = document.querySelector(".slide-changer input");
 const SLIDE_CHANGER_PROGRESS_BAR = document.querySelector(".slide-changer_progress-bar");
 const PERCENT_OF_WIDTH_PB = 7;
 
-let lastKnownPosition = 0;
+// let lastKnownPosition = 0;
 let currentShiftX = 0;
 
 //func to change width of progress bar SLIDE_CHANGER
@@ -138,7 +138,7 @@ const handleHorizontalMove = () => {
 
     SLIDE_CHANGER.value = roundedValue;
     changeWidthPB(); //change with of progress bar because input event is not fired here
-    lastKnownPosition = roundedValue;
+    // lastKnownPosition = roundedValue;
     HORIZONTAL_SCROLL_ELEM.scrollLeft = currentShiftX * HORIZONTAL_SCROLL_AMOUNT;
 };
 
