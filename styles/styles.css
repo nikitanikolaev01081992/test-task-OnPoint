@@ -235,7 +235,7 @@ h3 {
   margin-top: -20px;
 }
 .slide-3 .slide-changer input:focus::-webkit-slider-runnable-track {
-  background: red;
+  background: transparent;
 }
 .slide-3 .slide-changer__text {
   display: flex;
