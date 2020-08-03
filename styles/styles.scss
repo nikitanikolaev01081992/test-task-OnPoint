@@ -44,6 +44,7 @@ h3 {
         height: 20px;
         border-radius: 50%;
         background-color: white;
+        cursor: pointer;
     }
 
     &__elem-active {
@@ -150,6 +151,42 @@ h3 {
         top: 510px;
         left: 817px;
     }
+
+    &__note {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        color: white;
+        font-weight: 100;
+
+        .lines {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .line-1,
+        .line-2 {
+            width: 2px;
+            height: 30px;
+            background-color: white;
+        }
+
+        .line-1 {
+            position: absolute;
+            left: -10px;
+            transform: rotate(-45deg);
+        }
+
+        .line-2 {
+            left: 10px;
+            position: absolute;
+            transform: rotate(45deg);
+        }
+    }
 }
 
 @keyframes curcle {
@@ -188,7 +225,7 @@ h3 {
         height: 0;
         top: 0;
         left: calc((100% - 700px) / 2);
-        transform: translateY(700px);
+        transform: translateY(680px);
         z-index: 3;
 
         &_progress-bar {
@@ -218,14 +255,26 @@ h3 {
         }
         input::-webkit-slider-thumb {
             background-image: url("../images/slide3/IceRock.png");
-            width: 65px;
-            height: 83px;
+            width: 44px;
+            height: 56px;
             cursor: pointer;
             -webkit-appearance: none;
-            margin-top: -33px;
+            margin-top: -20px;
         }
         input:focus::-webkit-slider-runnable-track {
             background: red;
+        }
+
+        &__text {
+            display: flex;
+            justify-content: space-between;
+            width: 700px;
+            font-size: 20px;
+
+            p {
+                padding-top: 15px;
+                margin: 0;
+            }
         }
     }
 
@@ -583,6 +632,525 @@ h3 {
 
             img {
                 margin-left: -8px;
+            }
+        }
+    }
+
+    .slide-3-3 {
+        background: no-repeat top/100% url("../images/bg-slide3-3.png");
+
+        .text-icons__icon {
+            width: 66px;
+            height: 66px;
+        }
+
+        .text-container {
+            position: absolute;
+        }
+
+        .text-icons__number,
+        .text-icons__text {
+            position: initial;
+            width: 100%;
+        }
+
+        .text-icons__item {
+            .text-icons__number {
+                font-size: 40px;
+            }
+
+            .text-icons__text {
+                font-size: 18px;
+            }
+        }
+
+        $top-position: 200px;
+        $bottom-position: 125px;
+
+        .item1 {
+            .text-icons__icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            top: $top-position;
+            left: calc(50%);
+            transform: translateX(-50%);
+
+            img {
+                max-width: 40%;
+                height: auto;
+            }
+
+            .text-icons__icon {
+                margin: 0;
+            }
+
+            .text-container {
+                bottom: 100%;
+                white-space: nowrap;
+            }
+
+            .text-icons__number,
+            .text-icons__text {
+                display: inline;
+            }
+
+            .text-icons__text {
+                font-size: 30px;
+                white-space: nowrap;
+            }
+        }
+
+        .item2,
+        .item3 {
+            top: calc(#{$top-position} + 150px);
+
+            .text-container {
+                white-space: nowrap;
+            }
+        }
+
+        .item2 {
+            right: calc(50% + 100px);
+
+            .text-icons__number,
+            .text-icons__text {
+                text-align: right;
+            }
+        }
+
+        .item3 {
+            left: calc(50% + 100px);
+
+            .text-icons__number,
+            .text-icons__text {
+                text-align: left;
+            }
+        }
+
+        .item11 {
+            bottom: $bottom-position;
+            left: calc(50%);
+            transform: translateX(-50%);
+
+            .text-icons__number,
+            .text-icons__text {
+                text-align: right;
+            }
+
+            .text-container {
+                top: 10px;
+                right: 110%;
+            }
+
+            img {
+                margin-left: -10px;
+                margin-top: -10px;
+            }
+        }
+
+        $left-position: 240px;
+
+        .item8,
+        .item9,
+        .item10 {
+            top: $top-position + 38px;
+            left: $left-position;
+
+            .text-container {
+                right: 110%;
+            }
+
+            .text-icons__number,
+            .text-icons__text {
+                text-align: right;
+            }
+        }
+
+        .item9 {
+            top: $top-position + 138px;
+
+            .text-container {
+                white-space: nowrap;
+            }
+        }
+
+        .item10 {
+            top: $top-position + 268px;
+        }
+
+        $right-position: $left-position;
+
+        .item7,
+        .item6,
+        .item5,
+        .item4 {
+            top: $top-position + 38px;
+            right: $right-position;
+
+            .text-container {
+                top: 10px;
+                left: 110%;
+                white-space: nowrap;
+            }
+
+            .text-icons__number,
+            .text-icons__text {
+                text-align: left;
+            }
+        }
+
+        .item6 {
+            top: initial;
+            bottom: calc(#{$bottom-position} + 170px);
+        }
+
+        .item5 {
+            top: initial;
+            bottom: calc(#{$bottom-position} + 85px);
+        }
+
+        .item4 {
+            top: initial;
+            bottom: $bottom-position;
+        }
+
+        .frame-grad {
+            width: 250px;
+            height: 300px;
+            border-radius: 50px;
+            position: absolute;
+            top: calc(200px + 160px);
+            right: calc(240px - 175px);
+            background: linear-gradient(
+                to bottom,
+                rgba(41, 48, 103, 1) 0%,
+                rgba(41, 48, 103, 0.32) 40%,
+                rgba(41, 48, 103, 0.15) 60%,
+                rgba(41, 48, 103, 0) 100%
+            );
+            text-align: center;
+            padding-top: 10px;
+            letter-spacing: normal;
+        }
+
+        .slide-3_text {
+            &.text1,
+            &.text2 {
+                margin: 0;
+            }
+
+            &.text1 {
+                font-size: 15px;
+                position: absolute;
+                bottom: calc(#{$bottom-position} + 175px);
+                left: calc(50% + 25px);
+            }
+
+            &.text2 {
+                font-size: 30px;
+                position: absolute;
+                bottom: calc(#{$bottom-position} + 110px);
+                left: calc(50%);
+                transform: translateX(-50%);
+            }
+
+            &.text3 {
+                font-size: 15px;
+                position: absolute;
+                bottom: calc(#{$bottom-position} + 170px);
+                left: $left-position;
+            }
+        }
+
+        @mixin arrow-triangle($position: bottom, $pos_value: -10px, $rotate_angle: -3deg) {
+            content: "";
+            border: 3px solid transparent;
+            border-top: 9px solid white;
+            position: absolute;
+            #{$position}: $pos_value;
+            left: -2px;
+            transform: rotate($rotate_angle);
+        }
+
+        @mixin arrow($arrow-length, $arrow-top, $arrow-left, $rotate_angle) {
+            height: $arrow-length;
+            width: 2px;
+            background-color: white;
+            top: $arrow-top;
+            left: $arrow-left;
+            transform: rotate($rotate_angle);
+        }
+
+        .arrow-1 {
+            @include arrow(
+                110px,
+                calc(#{$top-position} + 9px),
+                calc(#{$left-position} + 138px),
+                80deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-2 {
+            @include arrow(
+                110px,
+                calc(#{$top-position} + 19px),
+                calc(#{$left-position} + 138px),
+                -100deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-3 {
+            @include arrow(
+                110px,
+                calc(#{$top-position} + 9px),
+                calc(#{$left-position} + 400px),
+                -80deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-4 {
+            @include arrow(
+                110px,
+                calc(#{$top-position} + 19px),
+                calc(#{$left-position} + 400px),
+                100deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-5 {
+            @include arrow(
+                160px,
+                calc(#{$top-position} + 40px),
+                calc(#{$left-position} + 145px),
+                60deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-6 {
+            @include arrow(
+                160px,
+                calc(#{$top-position} + 50px),
+                calc(#{$left-position} + 145px),
+                -120deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-7 {
+            @include arrow(
+                160px,
+                calc(#{$top-position} + 35px),
+                calc(#{$left-position} + 400px),
+                -67deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-8 {
+            @include arrow(
+                160px,
+                calc(#{$top-position} + 45px),
+                calc(#{$left-position} + 400px),
+                113deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-9 {
+            @include arrow(
+                232px,
+                calc(#{$top-position} + 49px),
+                calc(#{$left-position} + 139px),
+                53deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-10 {
+            @include arrow(15px, calc(#{$top-position} + 260px), calc(#{$left-position} + 33px), 0);
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-11 {
+            @include arrow(
+                90px,
+                calc(#{$top-position} + 242px),
+                calc(#{$left-position} + 96px),
+                -68deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-12 {
+            @include arrow(
+                60px,
+                calc(#{$top-position} + 290px),
+                calc(#{$left-position} + 107px),
+                -90deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-13 {
+            @include arrow(50px, calc(#{$top-position} + 97px), calc(#{$left-position} + 240px), 0);
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-14 {
+            @include arrow(50px, calc(#{$top-position} + 97px), calc(#{$left-position} + 300px), 0);
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-15 {
+            @include arrow(
+                190px,
+                calc(#{$top-position} + 104px),
+                calc(#{$left-position} + 270px),
+                0
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-16 {
+            @include arrow(
+                50px,
+                calc(#{$top-position} + 244px),
+                calc(#{$left-position} + 240px),
+                0
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-17 {
+            @include arrow(
+                15px,
+                calc(#{$top-position} + 225px),
+                calc(#{$left-position} + 300px),
+                0
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-18 {
+            @include arrow(
+                20px,
+                calc(#{$top-position} + 275px),
+                calc(#{$left-position} + 300px),
+                0
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-19 {
+            @include arrow(
+                20px,
+                calc(#{$top-position} + 348px),
+                calc(#{$left-position} + 255px),
+                180deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-20 {
+            @include arrow(
+                20px,
+                calc(#{$top-position} + 343px),
+                calc(#{$left-position} + 283px),
+                0
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-21 {
+            @include arrow(
+                20px,
+                calc(#{$top-position} + 130px),
+                calc(#{$left-position} + 553px),
+                180deg
+            );
+
+            &::after {
+                @include arrow-triangle;
+            }
+        }
+
+        .arrow-22 {
+            @include arrow(
+                20px,
+                calc(#{$top-position} + 125px),
+                calc(#{$left-position} + 563px),
+                0
+            );
+
+            &::after {
+                @include arrow-triangle;
             }
         }
     }

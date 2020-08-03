@@ -101,6 +101,25 @@ document.addEventListener("touchstart", handleTouchStart);
 document.addEventListener("touchend", handleTouchEnd);
 document.addEventListener("touchmove", handleTouchMove);
 
+slideIndicatorContainer.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!target.classList.contains("slide-indicator__elem")) return;
+
+    let newActiveIndex = 0;
+    let i = 0;
+
+    for (; i <= indicatorElems.elements.length; i++) {
+        if (indicatorElems.elements[i].domElem === target) {
+            newActiveIndex = i;
+            break;
+        }
+    }
+
+    currentShiftY = i; //not good! will be better to create func
+    SCROLL_ELEM.scrollTop = currentShiftY * SCROLL_AMOUNT;
+    indicatorElems.makeActiveElem(newActiveIndex);
+});
+
 //---------------------------------------------------------------------------------
 //logic for horizontal scrolling by slide-changer
 //---------------------------------------------------------------------------------
